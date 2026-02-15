@@ -1,149 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<!-- Primary SEO -->
-<title>Cousins & Co Tech | Leading Software Company in Bengaluru</title>
-<meta name="description" content="Cousins & Co Tech is a premier software company based in Bengaluru, specializing in innovative web and mobile solutions for businesses. Coming soon!">
-<meta name="keywords" content="Cousins & Co Tech, Software Company Bengaluru, Web Development, Mobile App Development, IT Solutions, Tech Startup India">
-<meta name="robots" content="index, follow">
-<meta name="author" content="Cousins & Co Tech">
-
-<!-- Open Graph / Facebook -->
-<meta property="og:title" content="Cousins & Co Tech | Leading Software Company in Bengaluru">
-<meta property="og:description" content="Cousins & Co Tech is a premier software company based in Bengaluru, specializing in innovative web and mobile solutions for businesses. Coming soon!">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://cousinsandcotech.in/">
-<meta property="og:image" content="https://cousinsandcotech.in/og-image.png">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Cousins & Co Tech | Leading Software Company in Bengaluru">
-<meta name="twitter:description" content="Cousins & Co Tech is a premier software company based in Bengaluru, specializing in innovative web and mobile solutions for businesses. Coming soon!">
-<meta name="twitter:image" content="https://yourwebsite.com/twitter-image.png">
-
-<!-- Google / Schema.org Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareCompany",
-  "name": "Cousins & Co Tech",
-  "url": "https://cousinsandcotech.in/",
-  "logo": "https://cousinsandcotech.in/logo.png",
-  "description": "Cousins & Co Tech is a premier software company based in Bengaluru, specializing in innovative web and mobile solutions.",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Bengaluru",
-    "addressCountry": "IN"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+91-XXXXXXXXXX",
-    "contactType": "Customer Service"
-  },
-  "sameAs": [
-    "https://www.linkedin.com/company/yourcompany",
-    "https://www.facebook.com/yourcompany",
-    "https://twitter.com/yourcompany"
-  ]
-}
-</script>
-
-
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Oswald:wght@500;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
-
-<style>
-/* ---------- RESET ---------- */
-* { margin:0; padding:0; box-sizing:border-box; }
-html, body { height:100%; font-family:'Montserrat', sans-serif; background:#000; color:#fff; overflow-x:hidden; }
-
-/* ---------- INTRO SCREEN ---------- */
-#intro { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:#000; z-index:9999; animation:introScreen 3.5s ease forwards; }
-#intro h1 { font-family:'Roboto', sans-serif; font-weight:700; font-size:clamp(2rem,6vw,4rem); letter-spacing:10px; color:#fff; opacity:0; text-transform:uppercase; animation:introText 2.8s ease forwards; }
-@keyframes introText { 0%{opacity:0; transform:translateY(15px); filter:blur(8px);} 30%{opacity:1; transform:translateY(0); filter:blur(0);} 70%{opacity:1; letter-spacing:15px;} 100%{opacity:0; transform:translateY(-15px);} }
-@keyframes introScreen { 0%,85%{opacity:1;} 100%{opacity:0; visibility:hidden;} }
-
-/* ---------- PARTICLE BACKGROUND ---------- */
-#spaceCanvas { position:fixed; inset:0; z-index:1; }
-
-/* ---------- MAIN CONTENT ---------- */
-main { position:relative; z-index:2; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; opacity:0; animation:siteReveal 1.2s ease forwards; animation-delay:3.2s; }
-@keyframes siteReveal { to{opacity:1;} }
-
-.wrapper { width:90%; max-width:900px; }
-
-h1.brand-name { font-family:'Roboto', sans-serif; font-weight:700; font-size:clamp(2.5rem,8vw,5rem); letter-spacing:2px; text-transform:uppercase; line-height:1.2; margin-bottom:10px; }
-
-.subtitle { font-family:'Montserrat', sans-serif; font-weight:300; letter-spacing:5px; text-transform:uppercase; color:#888; font-size:0.85rem; margin-bottom:50px; }
-.subtitle span { color:#ff3e3e; font-weight:500; }
-
-/* ---------- GLASS CARD ---------- */
-.card { backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); background: rgba(20,20,20,0.45); border:1px solid rgba(255,255,255,0.08); border-top:1.5px solid rgba(255,255,255,0.25); padding:60px 40px; border-radius:6px; box-shadow:0 25px 50px -12px rgba(0,0,0,0.7); position:relative; overflow:hidden; transition: transform 0.4s ease, border-color 0.4s ease; }
-.card::before { content:""; position:absolute; top:0; left:-100%; width:100%; height:100%; background:linear-gradient(90deg,transparent, rgba(255,255,255,0.05), transparent); transition:0.5s; }
-.card:hover::before { left:100%; }
-.card:hover { transform:translateY(-5px); border-color: rgba(255,62,62,0.3); }
-
-.card h2 { font-family:'Oswald',sans-serif; font-weight:500; font-size:1.2rem; letter-spacing:8px; text-transform:uppercase; margin-bottom:15px; color:#fff; }
-.card p { font-weight:300; font-size:0.9rem; letter-spacing:1.5px; color:rgba(255,255,255,0.7); max-width:400px; margin:0 auto; }
-
-@media(max-width:600px) { .card {padding:40px 20px;} h1.brand-name {font-size:clamp(2rem,10vw,3rem);} .subtitle{font-size:0.75rem;} }
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cousins & Co Tech | Innovating Beyond Horizons</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<div id="intro">
-    <h1>The Cousins Club</h1>
-</div>
-</header>
 
-<!-- PARTICLE BACKGROUND -->
-<canvas id="spaceCanvas" aria-hidden="true"></canvas>
+    <div id="intro-overlay">
+        <div class="intro-scanlines"></div>
+        <div class="intro-vignette"></div>
 
-<main>
-    <div class="wrapper">
-        <h1 class="brand-name">Cousins & <br> Co Tech</h1>
-        <div class="subtitle">by <span>The Cousins Club</span></div>
+        <div class="intro-content">
+            <div class="intro-pre-text">Est. 2025 · A Collective</div>
+            <div class="intro-title-wrap">
+                <h1 class="intro-title">
+                    <span class="intro-word">THE</span>
+                    <span class="intro-word accent-word">COUSINS</span>
+                    <span class="intro-word">CLUB</span>
+                </h1>
 
-        <section class="card">
-            <h2>Coming Soon</h2>
-            <p>We’re crafting innovative solutions for businesses. Stay tuned for our official launch!</p>
-        </section>
+                <img src="stamp.png" alt="Stamp" class="intro-stamp">
+                
+                <div class="intro-line-left"></div>
+                <div class="intro-line-right"></div>
+            </div>
+            <div class="intro-sub-text">Innovating Beyond Horizons</div>
+            <div class="intro-ticker">
+                <span> · · · · · TCC · KOUSTHUBHA · RUCHITHA · TARUN · VINUTHA · </span>
+                <span>HARSHA · ANUSHA · TEJASWINI · LIKHITH · </span>
+            </div>
+        </div>
+
+        <div class="intro-corner tl"></div>
+        <div class="intro-corner tr"></div>
+        <div class="intro-corner bl"></div>
+        <div class="intro-corner br"></div>
     </div>
-</main>
 
-<script>
-// PARTICLE SYSTEM
-const canvas = document.getElementById('spaceCanvas');
-const ctx = canvas.getContext('2d');
-let particles = [];
+    
+    <canvas id="starfield"></canvas>
+    <div class="overlay-gradient"></div>
+    <div class="noise-overlay"></div>
 
-function resize() { canvas.width=window.innerWidth; canvas.height=window.innerHeight; initParticles(); }
-window.addEventListener('resize', resize);
+ 
+    <header id="site-header">
+        <nav class="glass-nav">
+            <div class="logo">
+                <span class="logo-mark">Cousins & </span>Co Tech
+            </div>
 
-class Particle {
-    constructor(){this.reset();}
-    reset(){
-        this.x=Math.random()*canvas.width; this.y=Math.random()*canvas.height;
-        const type=Math.random();
-        if(type<0.35){this.size=Math.random()*1.2+0.5; this.color='#ff3e3e'; this.alpha=Math.random()*0.6+0.2;}
-        else if(type<0.7){this.size=Math.random()*1+0.2; this.color='#808080'; this.alpha=Math.random()*0.4+0.1;}
-        else{this.size=Math.random()*1.5+0.5; this.color='#fff'; this.alpha=Math.random()*0.6+0.3;}
-        this.vx=(Math.random()-0.5)*0.15; this.vy=(Math.random()-0.5)*0.15;
-    }
-    update(){this.x+=this.vx; this.y+=this.vy; if(this.x<0)this.x=canvas.width; if(this.x>canvas.width)this.x=0; if(this.y<0)this.y=canvas.height; if(this.y>canvas.height)this.y=0;}
-    draw(){ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fillStyle=this.color; ctx.globalAlpha=this.alpha; ctx.fill();}
-}
+            <div class="hamburger" aria-label="Toggle navigation" role="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-function initParticles(){particles=[]; const count=window.innerWidth>800?400:200; for(let i=0;i<count;i++) particles.push(new Particle());}
-function animate(){ctx.clearRect(0,0,canvas.width,canvas.height); particles.forEach(p=>{p.update();p.draw();}); requestAnimationFrame(animate);}
-resize(); animate();
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="mobile-cta"><a href="#contact" class="cta-button primary small">Get in Touch</a></li>
+            </ul>
 
-// HIDE INTRO
-setTimeout(()=>{document.getElementById('intro').style.display='none';},3600);
-</script>
+            <a href="#contact" class="cta-button primary small desktop-only">Get in Touch</a>
+        </nav>
+    </header>
+
+    <main id="site-main">
+
+
+        <section id="home" class="hero-section">
+            <div class="hero-bg-text">TCC</div>
+
+            <div class="hero-content">
+                <div class="hero-badge reveal-seq" data-delay="0">
+                    <span class="badge-dot"></span>
+                    Available for Projects · 2026
+                </div>
+
+                <h1 class="hero-title">
+                    <span class="hero-line reveal-seq" data-delay="1"><span class="logo-mark">Cousins & </span></span>
+                    <span class="hero-line hero-accent reveal-seq" data-delay="2">Co Tech</span>
+                </h1>
+
+                <p class="hero-subtitle reveal-seq" data-delay="3">
+                    A collective of visionary developers bound by blood and code.<br>
+                    We build what others only dream about.
+                </p>
+
+                <div class="hero-actions reveal-seq" data-delay="4">
+                    <a href="#contact" class="cta-button primary">
+                        <span>Start a Project</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+                    <a href="#services" class="cta-button ghost">
+                        <span>Explore Services</span>
+                    </a>
+                </div>
+
+
+            </div>
+
+            <div class="hero-scroll-cue reveal-seq" data-delay="6">
+                <div class="scroll-line"></div>
+                <span>Scroll to explore</span>
+            </div>
+        </section>
+
+
+        <section id="about" class="about-section">
+            <div class="about-layout">
+                <div class="about-label scroll-reveal">
+                    <span class="label-line"></span>
+                    <span>About Us</span>
+                </div>
+
+                <div class="about-main scroll-reveal delay-1">
+                    <h2 class="about-heading">
+                        We are not just a team.<br>
+                        <em>We are a legacy.</em>
+                    </h2>
+                </div>
+
+                <div class="about-body scroll-reveal delay-2">
+                    <p>
+                        The Cousins Club was born from late-night conversations, shared ambitions,
+                        and an unshakeable belief that family-built tech hits different. We are a
+                        collective of developers, designers, and architects — bound by blood, driven by code.
+                    </p>
+                    <p>
+                        Every project we take on becomes part of our legacy. We translate complex ideas
+                        into elegant, high-performance digital reality that stands the test of time.
+                    </p>
+                    <a href="#contact" class="text-link">
+                        Our full story
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </a>
+                </div>
+
+                <div class="about-card-wrap scroll-reveal delay-3">
+                    <div class="about-card">
+                        <div class="about-card-inner">
+                            <div class="card-orb"></div>
+                            <span class="card-eyebrow">Our Philosophy</span>
+                            <p class="card-quote">"Code with craft. Build with purpose. Ship with pride."</p>
+                            <div class="card-sig">— The Cousins Club</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="services" class="services-section">
+            <div class="section-header scroll-reveal">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span>What We Do</span>
+                </div>
+                <h2>Our Expertise</h2>
+                <p>Engineering excellence meets artistic vision.</p>
+            </div>
+
+            <div class="services-grid">
+
+                <div class="service-card scroll-reveal delay-1">
+                    <div class="service-number">01</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="2" y="5" width="24" height="17" rx="2"/><path d="M8 22v2M20 22v2M5 25h18"/><path d="M8 12l3 3-3 3"/><path d="M13 18h5"/></svg>
+                        </div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Next-gen websites using modern frameworks. Blazing fast, fully responsive, and crafted to convert.</p>
+                    <div class="service-tags">
+                        <span>React</span><span>Next.js</span><span>Node</span>
+                    </div>
+                    <div class="service-hover-glow"></div>
+                </div>
+
+                <div class="service-card scroll-reveal delay-2">
+                    <div class="service-number">02</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="8" y="2" width="12" height="22" rx="3"/><circle cx="14" cy="20" r="1" fill="currentColor"/></svg>
+                        </div>
+                    </div>
+                    <h3>App Development</h3>
+                    <p>Native-feel cross-platform apps. We build iOS and Android experiences that users actually love.</p>
+                    <div class="service-tags">
+                        <span>Flutter</span><span>React Native</span><span>Swift</span>
+                    </div>
+                    <div class="service-hover-glow"></div>
+                </div>
+
+                <div class="service-card scroll-reveal delay-3">
+                    <div class="service-number">03</div>
+                    <div class="service-icon-wrap">
+                        <div class="service-icon">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="3" y="3" width="10" height="10" rx="2"/><rect x="15" y="3" width="10" height="10" rx="2"/><rect x="3" y="15" width="10" height="10" rx="2"/><rect x="15" y="15" width="10" height="10" rx="2"/></svg>
+                        </div>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Interfaces that feel inevitable. We design experiences that engage, delight, and convert users.</p>
+                    <div class="service-tags">
+                        <span>Figma</span><span>Prototyping</span><span>Systems</span>
+                    </div>
+                    <div class="service-hover-glow"></div>
+                </div>
+
+                
+
+            </div>
+        </section>
+
+        <section id="process" class="process-section">
+            <div class="section-header scroll-reveal">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span>How We Work</span>
+                </div>
+                <h2>Our Process</h2>
+                <p>Structured. Transparent. Relentless.</p>
+            </div>
+
+            <div class="process-track">
+                <div class="process-line"></div>
+
+                <div class="process-step scroll-reveal delay-1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery</h3>
+                        <p>Deep dive into your vision, goals, and constraints. We ask the hard questions others skip.</p>
+                    </div>
+                </div>
+
+                <div class="process-step scroll-reveal delay-2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Architecture</h3>
+                        <p>We map every decision before writing line one of code. Design + systems thinking first.</p>
+                    </div>
+                </div>
+
+                <div class="process-step scroll-reveal delay-3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Build</h3>
+                        <p>Iterative sprints with full transparency. You see progress weekly, not just at the end.</p>
+                    </div>
+                </div>
+
+                <div class="process-step scroll-reveal delay-4">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Launch &amp; Beyond</h3>
+                        <p>We don't disappear after launch. We monitor, iterate, and scale with you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+ 
+        <section id="contact" class="contact-section">
+            <div class="contact-layout scroll-reveal">
+
+                <div class="contact-info">
+                    <div class="section-label">
+                        <span class="label-line"></span>
+                        <span>Get In Touch</span>
+                    </div>
+                    <h2>Let's Build<br><em>the Future</em></h2>
+                    <p>Have a project, a wild idea, or just want to say hi? We're ready to turn your vision into reality.</p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:cousinsandcotech@gmail.com" class="method">
+                            <div class="method-icon">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="1" y="3" width="16" height="12" rx="2"/><path d="M1 6l8 5 8-5"/></svg>
+                            </div>
+                            <span>cousinsandcotech@gmail.com</span>
+                        </a>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="#" class="social-link">LI</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="https://www.instagram.com/thecousinsclub8" class="social-link">IG</a>
+                    </div>
+                </div>
+
+                <form class="glass-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@company.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Service Interested In</label>
+                        <div class="select-wrap">
+                            <select>
+                                <option value="" disabled selected>Select a service…</option>
+                                <option value="web">Web Development</option>
+                                <option value="app">App Development</option>
+                                <option value="design">UI/UX Design</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <svg class="select-arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5l4 4 4-4"/></svg>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Tell us about your project</label>
+                        <textarea placeholder="Describe your project, goals, and timeline…" rows="5"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button primary full-width">
+                        <span>Send Message</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8l10 0M8 4l6 4-6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                    </button>
+                    <div class="form-note">We typically respond sooner.</div>
+                </form>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo footer-logo">
+                    <span class="logo-mark">Cousins & </span>Co Tech
+                </div>
+                <p>Innovating Beyond Horizons.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-bottom">
+                <span>&copy; 2026 Cousins & Co Tech. All Rights Reserved.</span>
+                <div class="socials">
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="https://www.instagram.com/thecousinsclub8">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
